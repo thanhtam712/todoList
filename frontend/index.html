@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <title>To Do List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="design.css">
+
+</head>
+
+<body>
+    <div class="main text-center container mx-auto" id="border">
+        <div>
+            <h1 class="text-7xl font-semibold mt-5 mb-10">To Do List</h1>
+        </div>
+
+
+        <div class="grid grid-cols-6 gap-4 mb-10">
+            <button class="btn btn-info text-xl" onclick="my_modal_5.showModal()">Add task</button>
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <h3 class="font-bold text-lg mb-5">What are you planned?</h3>
+
+                    <input id="task_input" type="text" placeholder="Task"
+                        class="input input-bordered input-accent w-full max-w-xs" />
+
+                    <div class="modal-action">
+                        <button class="btn" id="confirm" onclick="load_data()">Confirm</button>
+
+                        <form method="dialog">
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+            <div class="col-span-5"></div>
+        </div>
+
+        <div class="grid grid-cols-12 gap-4 flex flex-col w-full border-opacity-50 bg-gray-300 rounded-lg text-xl" id="list_todo">
+            <div>Tick</div>
+            <div class="col-span-9" style="width:300px">Task</div>
+            <div>Update</div>
+            <div>Delete</div>
+        </div>
+</body>
+
+<footer>
+    <script src="./todo_list.js"></script>
+</footer>
+
+</html>
